@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/set.css">
+    <link rel="icon" href="../media/pictures/icon.png">
+    <title>Set</title>
+</head>
+
+<body>
+    <img id="logo" src="../media/pictures/logoWhithSlogan.jpg">
+    <div id="buttons"><button type="button" id="add3Cards">add 3 cards</button>
+        <button type="button" id="hint">hint</button>
+        <button type="save" id="save">save game</button>
+    </div>
+    <div id="hints">
+        <h3>Hints:</h3>
+        <h4 id="currentHint"></h4>
+    </div>
+    <div id="scores">
+        <h3>Scores:</h3>
+        <div>
+            <div>
+                <h4>Old Score: <h4 id="oldScore"></h4>
+                </h4>
+            </div>
+            <div id="changingScore">
+                <h4>This Game Score: <h4 id="newScore"></h4>
+                </h4>
+            </div>
+        </div>
+    </div>
+    <div id="board" class="boardSmall">
+    </div>
+    <div id="rules">
+        <img id="xIcon" src="../media/pictures/xIcon.png">
+        <h2>How To Play:</h2>
+        <p>Use your mouse to select SETs from the board.<br>
+            A set consists of three cards satisfying all of these conditions:<br>
+            They all have the same number or have three different numbers.<br>
+            They all have the same symbol or have three different symbols.<br>
+            They all have the same shading or have three different shadings.<br>
+            They all have the same color or have three different colors. <br><br>
+            The rules of Set are summarized by: If you can sort a group of three cards into "two of ____ and one of
+            ____", then it is not a set.<br>
+            Given any two cards from the deck, there is one and only one other card that forms a set with them.<br><br>
+            There are cases when there will not be any sets on the board, you can than use the 'add 3 cards' button for
+            a better chance at finding a set.<br>
+            You can use the 'hint' and 'add 3 cards' buttons if you ever get stuck, but every hint is one point less and if you try to add cards and there is a set you will miss a point.</p>
+        <div><button type="newGame" id="newGame">new game</button>
+            <button type="savedGame" id="savedGame">continue saved game</button>
+        </div>
+    </div>
+    <h3 id="messages"></h3>
+    <script src="../js/set.js"></script>
+</body>
+
+</html>

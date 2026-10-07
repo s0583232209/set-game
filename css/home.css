@@ -1,0 +1,258 @@
+@font-face {
+    font-family: Agbalumo;
+    src: url('../fonts/Agbalumo/Agbalumo-Regular.ttf');
+}
+
+@font-face {
+    font-family: ABeeZee;
+    src: url('../fonts/ABeeZee-Regular.ttf')
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    font-family: ABeeZee;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('../media/pictures/background.jpg');
+    background-size: 100vw;
+    background-position: fixed;
+    background-repeat: no-repeat;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background-image: linear-gradient(to right, #ff4036 45%, white);
+    height: 180px;
+}
+
+ul {
+    padding: 0%;
+    margin: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-items: center;
+}
+
+ul li {
+    display: inline-block;
+    margin-inline: 2.5%;
+    margin-top: 2vh;
+}
+
+ul li h3,
+#slogan {
+    font-family: 'Agbalumo';
+    font-size: 45px;
+    width: 45vw;
+    text-align: center;
+}
+
+#logInSignUp {
+    align-self: center;
+}
+
+header button {
+    background-color: #ff4036;
+    border: none;
+    height: 60px;
+    width: 140px;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 110, 0.448) 0px 7px 29px 0px;
+    font-size: 1rem;
+    font-family: ABeeZee;
+}
+
+button:hover,
+#signUp:hover,
+#logIn:hover {
+    background-color: #ff403696;
+    border: none;
+    color: white;
+}
+
+#logo {
+    height: 150px;
+    border-right: white 2px solid;
+    align-self: center;
+    justify-self: center;
+}
+
+#games li img {
+    width: 300px;
+    margin-top: 120px;
+    border-radius: 25px;
+    box-shadow: inset white 8px 7px 25px 20px, white -2px -2px 25px 12px;
+}
+
+form {
+    background-color: rgba(236, 236, 236, 0.89);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 28vw;
+    height: fit-content;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 1.5rem;
+    gap: 20px;
+    position: absolute;
+    top: 200px;
+    left: 35%;
+    z-index: 1;
+}
+
+#xIcon {
+    margin-top: -3px;
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: auto;
+    margin-right: -15px;
+}
+
+form div div {
+    margin-bottom: 30px;
+}
+
+#detailes {
+    align-self: center;
+}
+
+#divPassword {
+    display: flex;
+}
+
+#divPassword img {
+    border: 1px solic black;
+    margin-left: -30px;
+    align-self: center;
+}
+
+#password,
+#userName {
+    width: 16rem;
+    height: 2.8rem;
+    border: none;
+    border-radius: 1px;
+    box-shadow: rgba(100, 100, 110, 0.199) 0px 7px 29px 0px;
+    font-size: 1.5rem;
+    font-family: ABeeZee;
+    box-shadow: rgba(100, 100, 110, 0.448) 0px 7px 29px 0px;
+}
+
+
+#userNameLabel {
+    display: block;
+}
+
+#password:focus,
+#userName:focus {
+    background-color: #ff40361b;
+}
+
+#logoWithSlogan {
+    height: auto;
+    width: 60%;
+    align-self: center;
+}
+
+#submitButtons {
+    display: flex;
+    justify-content: center;
+}
+
+#signUp,
+#logIn {
+    background-color: #ff4036;
+    border: none;
+    height: 40px;
+    width: 80px;
+    border-radius: 7px;
+    box-shadow: rgba(100, 100, 110, 0.448) 0px 7px 29px 0px;
+    font-size: 1rem;
+    font-family: ABeeZee;
+    margin: 25px;
+}
+
+@media only screen and (max-width:900px) {
+    ul {
+        justify-content: space-around;
+        margin-right: 4vw;
+        ;
+    }
+
+    ul li h3 {
+        display: none;
+    }
+
+    #slogan {
+        display: contents;
+
+    }
+}
+
+
+
+
+.card {
+    margin: 5px;
+    width: calc(33.33% - 10px);
+    padding-top: 20%;
+    cursor: pointer;
+    background: aqua;
+    border-color: black;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px -5px rgba(black, .2);
+    position: relative;
+    transition: .2s ease-in-out;
+    opacity: 1;
+    perspective: 1000px;
+    transform-origin: left center;
+    transform: rotateY(60deg);
+    transform-style: preserve-3d;
+
+    &.fadeIn {
+        opacity: 1;
+        transform: rotateY(0deg);
+    }
+
+    .card-content {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+    }
+
+    svg {
+        height: 100%;
+        margin: 0 2%;
+    }
+
+    path,
+    rect {
+        stroke-width: 2;
+    }
+}
+#userNameMessage,#passwordMessage{
+    color:#ff4036;
+    font-size: 1rem;
+}
+#formMessage{
+    color:#ff4036;
+    font-size:1.5rem;
+}

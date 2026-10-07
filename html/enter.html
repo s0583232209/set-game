@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../media/pictures/icon.png">
+    <link href="../css/home.css" rel="stylesheet">
+    <title>Play Time</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><img id="logo" src="../media/pictures/‏‏logoWithoutSlogan.png"></li>
+                <li>
+                    <h3>allways the right time to play!</h3>
+                </li>
+                <li><button id="logInSignUp">log in/sign up</button></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+
+        <ul id="games">
+            <li><a href='../html/empty.html'><img src="../media/pictures/monopoly.jpg"></a></li>
+            <li><a href='../html/limitedSet.html'><img src="../media/pictures/set.jpg"></a></li>
+            <li><a href='../html/empty.html'><img src="../media/pictures/merge.jpg"></a></li>
+            <li><a href='../html/empty.html'><img src="../media/pictures/taki.jpg"></a></li>
+            <form id="enter">
+
+                <img id="xIcon" src="../media/pictures/xIcon.png">
+                <p id="formMessage"></p>
+                <div id="detailes">
+                    <div>
+                        <label for="userName" id="userNameLabel">User Name</label>
+                        <input name="userName" id="userName">
+                        <p id="userNameMessage"></p>
+                    </div>
+                    <div>
+                        <label for="password">Password</label>
+                        <div id="divPassword">
+                            <input type="password" id="password" name="password">
+                            <img id="open-closed-eye" src="../media/pictures/on.png">
+                        </div>
+                        <p id="passwordMessage"></p>
+                    </div>
+                </div>
+                <img id="logoWithSlogan" src="../media/pictures/‏‏logoWithoutSlogan.png">
+                <div id="submitButtons">
+                    <button id="signUp" type="submit">sign up</button>
+                    <button id="logIn" type="submit">log in</button>
+                </div>
+
+            </form>
+
+    </main>
+    <script src="../js/signUpLogIn.js"></script>
+</body>
+
+</html>

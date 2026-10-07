@@ -1,0 +1,42 @@
+@font-face {
+    font-family: ABeeZee;
+    src: url('../fonts/ABeeZee-Regular.ttf')
+}
+
+html {
+    background-image: url('../media/pictures/diceBackground.jpg');
+    background-size: 100vw;
+    background-position: fixed;
+    background-repeat: no-repeat;
+    margin: 0;
+    font-family: ABeeZee;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 200px;
+}
+
+#anouncement {
+    display: flex;
+    background-color: #ff4036;
+    justify-content: space-around;
+    text-align: center;
+    padding: 25px;
+    margin-top: 110px;
+}
+
+h1 {
+    font-size: 2.3rem;
+}
+
+img {
+    width: 150px;
+    height: auto;
+}

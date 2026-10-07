@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/set.css">
+    <link rel="icon" href="../media/pictures/icon.png">
+    <title>Set</title>
+</head>
+
+<body>
+    <img id="logo" src="../media/pictures/logoWhithSlogan.jpg">
+    <div id="buttons"><button type="button" id="add3Cards">add 3 cards</button>
+        <button type="button" id="hint">hint</button>
+        <button type="save" id="save">save game</button>
+    </div>
+    <div id="hints">
+        <h3>Hints:</h3>
+        <h4 id="currentHint"></h4>
+    </div>
+    <div id="scores">
+        <h3>Scores:</h3>
+        <div>
+            <div>
+                <h4>Old Score: <h4 id="oldScore"></h4>
+                </h4>
+            </div>
+            <div id="changingScore">
+                <h4>This Game Score: <h4 id="newScore"></h4>
+                </h4>
+            </div>
+        </div>
+    </div>
+    <div id="board" class="boardSmall">
+    </div>
+    <h3 id="messages"></h3>
+    <script src="../js/savedGame.js"></script>
+</body>
+
+</html>

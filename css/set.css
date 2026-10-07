@@ -1,0 +1,395 @@
+@font-face {
+    font-family: ABeeZee;
+    src: url('../fonts/ABeeZee-Regular.ttf')
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    font-family: ABeeZee;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+#logo {
+    width: 20vw;
+    margin-top: 2vh;
+    margin-left: 1vw;
+    border: none;
+}
+
+#rules {
+    justify-self: center;
+    background-color: rgba(236, 236, 236, 0.916);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 55vw;
+    height: fit-content;
+    border-radius: 25px;
+    justify-content: space-evenly;
+    font-size: 1.3rem;
+    position: absolute;
+    top: 3vh;
+    left: 22.5vw;
+    z-index: 4;
+}
+
+#xIcon {
+    margin-top: -3px;
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: auto;
+    margin-right: -15px;
+}
+
+#rules h2 {
+    margin-top: -8px;
+    font-size: 2rem;
+    margin-left: 220px;
+}
+
+#rules p {
+    margin-left: 12px;
+}
+
+#rules div {
+    display: flex;
+    margin-left: 110px;
+}
+
+#newGame,
+#savedGame {
+    width: 250px;
+    height: 60px;
+    color: black;
+    background-color: #8d44ad63;
+}
+
+#newGame:hover,
+#savedGame:hover {
+    color: rgb(255, 255, 255);
+    background-color: #8d44ada8;
+}
+
+div h4 {
+    font-size: 2rem;
+}
+
+#buttons {
+    display: flex;
+    position: absolute;
+    top: 170px;
+    margin-left: 10vw;
+}
+
+div button {
+    background-color: #8e44ad;
+    border: none;
+    height: 45px;
+    width: 120px;
+    border-radius: 5px;
+    box-shadow: rgba(100, 100, 110, 0.448) 0px 7px 29px 0px;
+    font-size: 1.2rem;
+    font-family: ABeeZee;
+    margin: 15px;
+    color: white;
+}
+
+button:hover {
+    background-color: #8d44ad92;
+    border: none;
+    color: #40005c;
+}
+
+#hints,
+#scores {
+    background-color: #8d44ad34;
+    border-radius: 10px;
+    width: 35%;
+    height: 160px;
+    margin-left: 5vw;
+}
+
+#hints {
+    margin-top: 120px;
+}
+
+div h3 {
+    font-size: 1.8rem;
+    padding: 10px;
+}
+
+
+#scores .set {
+    color: rgb(38, 216, 38);
+}
+
+#scores .notSet {
+    color: #e74c3c;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    width: 750px;
+    justify-content: space-around;
+    position:absolute;
+    right: 80px;
+    background-color: #d3d0db9f;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+.boardSmall {
+    height: 510px;
+    top:8vh;
+}
+
+.boardBig {
+    height: 665px;
+    top:1vh;
+}
+
+#board>div {
+    box-shadow: rgba(135, 135, 144, 0.448) 0px 2px 5px 0px;
+    border: none;
+    border-radius: 20px;
+    margin: 7px;
+    background-color: white;
+    width: 230px;
+    height: 150px;
+}
+
+.contentDiv {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    margin: auto;
+
+}
+
+.shapesDiv {
+    width: 38px;
+    height: 100px;
+}
+
+.red,
+.green,
+.purple {
+    border: 1px solid black;
+}
+
+.empty .inside,
+.empty .insideBorder {
+    background-color: rgba(255, 255, 255, 0);
+    stroke-width: 50;
+}
+
+.red .inside,
+.red .insideBorder {
+    background-color: #e74c3c;
+
+}
+
+.green .inside,
+.green .insideBorder {
+    background-color: #27ae60;
+}
+
+.purple .inside,
+.purple .insideBorder {
+    background-color: #8e44ad;
+}
+
+.rhombus .inside,
+.rhombus .insideBorder {
+    clip-path: path('M25 0 L50 50 L25 100 L0 50 Z');
+}
+
+.ellipse .inside,
+.ellipse .insideBorder {
+    clip-path: path('M25,99.5C14.2,99.5,5.5,90.8,5.5,80V20C5.5,9.2,14.2,0.5,25,0.5S44.5,9.2,44.5,20v60 C44.5,90.8,35.8,99.5,25,99.5z');
+}
+
+.squiggle .inside,
+.squiggle .insideBorder {
+    clip-path: path('M38.4,63.4c0,16.1,11,19.9,10.6,28.3c-0.5,9.2-21.1,12.2-33.4,3.8s-15.8-21.2-9.3-38c3.7-7.5,4.9-14,4.8-20 c0-16.1-11-19.9-10.6-28.3C1,0.1,21.6-3,33.9,5.5s15.8,21.2,9.3,38C40.4,50.6,38.5,57.4,38.4,63.4z');
+}
+
+.empty .inside,
+.empty .insideBorder {
+    background-color: white;
+}
+
+.striped .inside,
+.striped .insideBorder {
+    background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0) 50%, white 50%);
+    background-size: 100% 3px;
+
+}
+
+.insideBorder,
+.inside {
+    position: absolute;
+    width: 6vw;
+    height: 100px;
+}
+
+.red .insideBorder {
+    background: #e74c3c;
+    z-index: 2;
+    transform: scale(1.1);
+}
+
+.green .insideBorder {
+    background: #27ae60;
+    z-index: 1;
+    transform: scale(1.1);
+}
+
+.purple .insideBorder {
+    background: #8e44ad;
+    z-index: 1;
+    transform: scale(1.1);
+}
+
+.red.ellipse .insideBorder {
+    background: #e74c3c;
+    z-index: 1;
+    transform: scale(1.08);
+}
+
+.green.ellipse .insideBorder {
+    background: #27ae60;
+    z-index: 1;
+    transform: scale(1.08);
+}
+
+.purple.ellipse .insideBorder {
+    background: #8e44ad;
+    z-index: 1;
+    transform: scale(1.08);
+}
+
+.squiggle .inside {
+    transform: scaleY(1.07)
+}
+
+.inside {
+    z-index: 3;
+
+}
+
+.insideBorder {
+    padding-top: -7px;
+    margin-left: 1.8px;
+
+}
+
+#board .selected {
+    box-shadow: rgba(135, 135, 144, 0.448) 0px 2px 5px 0px, inset 0 0 6px 3px#ffeb3be2;
+}
+
+.none {
+    display: none;
+}
+
+.block {
+    display: block;
+}
+
+#messages {
+    background-color: #8d44ad34;
+    color: black;
+    font-size: 3rem;
+    position: absolute;
+    top: 45%;
+    height: 5rem;
+    width: 98vw;
+    text-align: center;
+    padding: 1rem;
+    opacity: 0;
+    z-index: 5;
+}
+
+#currentHint {
+    text-align: center;
+    font-size: 3rem;
+}
+.highLighted{
+    box-shadow: #ffeb3be2 0px 0px 8px 4px;
+}
+
+#scores {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    margin-top: 50px;
+}
+
+#currentHint {
+    margin: 0px;
+}
+
+#scores h3 {
+    margin: 0px;
+}
+
+#scores div {
+    display: flex;
+    justify-content: space-around;
+}
+
+#scores div div {
+    margin-bottom: auto;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#scores div div h4 {
+    margin: 7px;
+    width: fit-content;
+    height: fit-content;
+}
+
+#limitedMessage {
+    background-color: #8d44ad34;
+    color: black;
+    font-size: 3rem;
+    position: absolute;
+    top: 45%;
+    height: fit-content;
+    width: 98vw;
+    text-align: center;
+    padding: 1rem;
+    opacity: 1;
+    z-index: 3;
+}
+
+#limitedMessage a {
+    display:block;
+    background-color: #8e44ad;
+    border: none;
+    height: 45px;
+    width: 120px;
+    border-radius: 5px;
+    box-shadow: rgba(100, 100, 110, 0.448) 0px 7px 29px 0px;
+    font-size: 1.2rem;
+    font-family: ABeeZee;
+    margin: 15px;
+    z-index: 3;
+}
